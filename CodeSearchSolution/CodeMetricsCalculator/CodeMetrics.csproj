@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CodeClone\CodeClone.csproj">
+      <Project>{6a23a150-550a-4432-921c-61a59ab9f4e0}</Project>
+      <Name>CodeClone</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TestBed\TestBed.csproj">
       <Project>{da2db004-0281-43e5-bb0e-598ae0fb3207}</Project>
       <Name>TestBed</Name>

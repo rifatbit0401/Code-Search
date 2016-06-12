@@ -6,11 +6,22 @@
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:WordNetService.cs" caret="4097" fromTop="20" />
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:Program.cs" caret="184" fromTop="6" />
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:LuceneService.cs" caret="945" fromTop="15" />
-    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Rule.cs" caret="0" fromTop="0" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:GenericModelConstructor.cs" caret="1386" fromTop="41" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Program.cs" caret="1826" fromTop="19" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Rule.cs" caret="721" fromTop="3" />
+    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:CodeMetricsCalculator.cs" caret="848" fromTop="17" />
+    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:Program.cs" caret="12" fromTop="0" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:CodePreProcessor.cs" caret="145" fromTop="7" />
   </RecentFiles>
   <RecentEdits>
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/d:Model/f:Synonym.cs" caret="355" fromTop="15" />
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:Program.cs" caret="671" fromTop="19" />
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:WordNetService.cs" caret="3740" fromTop="14" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:GenericModelConstructor.cs" caret="360" fromTop="6" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Rule.cs" caret="2306" fromTop="16" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Program.cs" caret="431" fromTop="9" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:CodePreProcessor.cs" caret="1418" fromTop="18" />
+    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:Program.cs" caret="972" fromTop="17" />
+    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:CodeMetricsCalculator.cs" caret="593" fromTop="12" />
   </RecentEdits>
 </RecentFiles>

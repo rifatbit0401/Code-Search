@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodeClone;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,22 +10,49 @@ namespace CodeMetricsCalculator
 {
     public class CodeMetricsCalculator
     {
+        public int GetNumberOfConditionalStatements(List<String>methodBody)
+        {
+            int numOfConditinalStatement = 0;
+
+            foreach (var line in methodBody)
+            {
+                string trimmed = line.Trim();
+                if (trimmed.StartsWith(CodeKeyword.IF + "(") || trimmed.StartsWith(CodeKeyword.ELSE_IF + "(") || trimmed.Equals(CodeKeyword.ELSE))
+                    numOfConditinalStatement++;
+            }
+
+            return numOfConditinalStatement;
+        }
+
+
         public int GetNumberOfArgument(string methodSignature)
         {
             return methodSignature.Substring(methodSignature.IndexOf('(')).Split(',').Length;
         }
 
-        public int GetNumberOfFunctionCall(List<String>methodBody)
+        public int GetNumberOfFunctionCall(List<String> methodBody)
         {
-            string extractFuncRegex = @"(?<func>add|sub|div)\s*\((?<params>[^()]*)\)";
-            string extractArgsRegex = @"(?:[^,()]+((?:\((?>[^()]+|\((?<open>)|\)(?<-open>))*\)))*)+";
+            int numOfFunctionCall = 0;
             foreach (var line in methodBody)
             {
-                var match = Regex.Match(line.Trim(), extractFuncRegex);
-                var innerArgs = Regex.Matches(match.Groups[1].Value, extractArgsRegex);
+                string str = line;
+
+                while (Regex.IsMatch(str, CodeKeyword.FUNC_CALL_REGEX))
+                {
+                    var match = Regex.Match(str, CodeKeyword.FUNC_CALL_REGEX);
+                    var methodName = match.ToString().Split('(')[0];
+                    str = str.Substring(str.IndexOf(methodName + "(") + methodName.Length + 1);
+                    if (methodName.Equals(CodeKeyword.FOR) || methodName.Equals(CodeKeyword.WHILE) || methodName.Equals(CodeKeyword.SWITCH) ||
+                        methodName.Equals(CodeKeyword.IF) || methodName.Equals(CodeKeyword.ELSE_IF) || methodName.Equals(CodeKeyword.ELSE))
+                    {
+                        continue;
+                    }
+                    numOfFunctionCall++;
+                }
+
             }
 
-            return 0;
+            return numOfFunctionCall;
         }
 
 
@@ -69,7 +97,7 @@ namespace CodeMetricsCalculator
                     );
         }
 
-       
+
 
 
     }

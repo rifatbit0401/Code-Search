@@ -6,3 +6,5 @@ E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeMetricsCalculator\
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeMetricsCalculator\obj\Debug\CodeMetrics.csprojResolveAssemblyReference.cache
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeMetricsCalculator\obj\Debug\CodeMetricsCalculator.exe
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeMetricsCalculator\obj\Debug\CodeMetricsCalculator.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeMetricsCalculator\bin\Debug\CodeClone.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeMetricsCalculator\bin\Debug\CodeClone.pdb

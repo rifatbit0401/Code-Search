@@ -20,6 +20,7 @@ namespace CodeClone
         public const string IF = "if";
         public const string ELSE_IF = "else if";
         public const string ELSE = "else";
+        public const string SWITCH = "switch";
         public const string FUNC_CALL_REGEX = @"[a-zA-Z]+\([^\)]*\)(\.[^\)]*\))?";
 
         public const string ADDITION = "+";

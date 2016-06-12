@@ -1,5 +1,5 @@
-2016/06/11-20:02:59.676 fdc Recovering log #19
-2016/06/11-20:02:59.676 fdc Level-0 table #21: started
-2016/06/11-20:02:59.788 fdc Level-0 table #21: 1215 bytes OK
-2016/06/11-20:02:59.933 fdc Delete type=0 #19
-2016/06/11-20:02:59.933 fdc Delete type=3 #17
+2016/06/12-10:18:31.119 11ec Recovering log #22
+2016/06/12-10:18:31.157 11ec Level-0 table #24: started
+2016/06/12-10:18:31.455 11ec Level-0 table #24: 55162 bytes OK
+2016/06/12-10:18:31.961 11ec Delete type=0 #22
+2016/06/12-10:18:31.961 11ec Delete type=3 #20

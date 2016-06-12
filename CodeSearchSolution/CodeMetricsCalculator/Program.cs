@@ -13,16 +13,17 @@ namespace CodeMetricsCalculator
         {
             var parser = new DirectoryBasedMethodParser();
             var methods = parser.ParseAllMethods(@"E:\BSSE Program\3rd semister BIT program\OOP-2\workspace\Calculator2\src");
-            
+
             var sourceCode = new List<String>();
             var codeMetricsCalculator = new CodeMetricsCalculator();
 
             foreach (var method in methods)
             {
                 Console.WriteLine(method.Signature);
-                Console.WriteLine("Loc: {0}",codeMetricsCalculator.GetLineOfCode(method.Body));
-                Console.WriteLine("NoA: {0}", codeMetricsCalculator.GetNumberOfArgument(method.Signature));
-                codeMetricsCalculator.GetNumberOfFunctionCall(method.Body);
+                Console.WriteLine("Loc: {0}", codeMetricsCalculator.GetLineOfCode(method.Body));
+                Console.WriteLine("NoA: {0}; NoFC: {1}; NoCS: {2}", codeMetricsCalculator.GetNumberOfArgument(method.Signature),
+                                  codeMetricsCalculator.GetNumberOfFunctionCall(method.Body), codeMetricsCalculator.GetNumberOfConditionalStatements(method.Body));
+
             }
 
             Console.ReadLine();
