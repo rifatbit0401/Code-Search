@@ -1,0 +1,7 @@
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\bin\Debug\UnitTestProject.dll
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\bin\Debug\UnitTestProject.pdb
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\bin\Debug\TestBed.exe
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\bin\Debug\TestBed.pdb
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\obj\Debug\UnitTestProject.dll
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\obj\Debug\UnitTestProject.pdb

@@ -1,0 +1,8 @@
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\bin\Debug\CodeClone.exe.config
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\obj\Debug\CodeClone.csprojResolveAssemblyReference.cache
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\bin\Debug\CodeClone.exe
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\bin\Debug\CodeClone.pdb
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\bin\Debug\TestBed.exe
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\bin\Debug\TestBed.pdb
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\obj\Debug\CodeClone.exe
+C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\obj\Debug\CodeClone.pdb
