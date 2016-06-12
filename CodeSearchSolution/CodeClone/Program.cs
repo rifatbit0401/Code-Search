@@ -12,17 +12,16 @@ namespace CodeClone
         static void Main(string[] args)
         {
             var parser = new DirectoryBasedMethodParser();
-            var methods = parser.ParseAllMethods(@"E:\BSSE Program\3rd semister BIT program\OOP-2\workspace");
+            var methods = parser.ParseAllMethods(@"E:\BSSE Program\3rd semister BIT program\OOP-2\workspace\Calculator2\src");
             var codeCloneDetector = new GenericModelConstructor();
             var models = new List<List<string>>();
             foreach (var method in methods)
             {
-               // Console.WriteLine(method.Signature);
+                // Console.WriteLine(method.Signature);
                 var model = codeCloneDetector.CreateModel(method.Body);
                 models.Add(model);
-               // Console.WriteLine("***********************");
+                // Console.WriteLine("***********************");
             }
-
             foreach (var method in methods)
             {
                 Console.WriteLine(method.Signature);
@@ -35,6 +34,19 @@ namespace CodeClone
                 Console.WriteLine("***********************");
 
             }
+
+            /*var codePreProcessor = new CodePreProcessor();
+            foreach (var method in methods)
+            {
+                Console.WriteLine(method.Signature);
+
+                foreach (var line in codePreProcessor.PreProcess(method.Body))
+                {
+                    Console.WriteLine(line);
+                }
+                Console.WriteLine("***********************");
+
+            }*/
 
             Console.ReadLine();
         }

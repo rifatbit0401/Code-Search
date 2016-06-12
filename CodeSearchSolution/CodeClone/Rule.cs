@@ -13,7 +13,7 @@ namespace CodeClone
         public const string DOUBLE = "double";
         public const string FLOAT = "float";
         public const string STRING = "string";
-        
+
         public const string FOR = "for";
         public const string WHILE = "while";
 
@@ -21,6 +21,11 @@ namespace CodeClone
         public const string ELSE_IF = "else if";
         public const string ELSE = "else";
         public const string FUNC_CALL_REGEX = @"[a-zA-Z]+\([^\)]*\)(\.[^\)]*\))?";
+
+        public const string ADDITION = "+";
+        public const string SUBTRACTION = "-";
+        public const string DIVISION = "/";
+        public const string MULTIPLICATION = "*";
 
     }
 
@@ -34,32 +39,52 @@ namespace CodeClone
         ELSE_IF,
         ELSE,
         FUNCTION_CALL,
+
+
+        ADDITION,
+        MULTIPLICATION,
+        SUBTRACTION,
+        DIVISION,
+
+
         TAB,
         NOT_FOUND
     }
 
+
     public class Rule
     {
-       
+
         public Tag GetTag(string line)
         {
             line = line.Trim();
-            if(IsDeclaration(line))
+            if (IsDeclaration(line))
                 return Tag.DECLARATION;
-            if(IsForLoop(line))
+            if (IsForLoop(line))
                 return Tag.FOR;
-            if(IsWhileLoop(line))
+            if (IsWhileLoop(line))
                 return Tag.WHILE;
-            if(IsIfStatement(line))
+            if (IsIfStatement(line))
                 return Tag.IF;
             if (IsElseIfStatement(line))
                 return Tag.ELSE_IF;
-            if(IsElseStatement(line))
+            if (IsElseStatement(line))
                 return Tag.ELSE;
-            if(IsFunctionCall(line))
+            if (IsFunctionCall(line))
                 return Tag.FUNCTION_CALL;
+
+            if (IsAddOperation(line))
+                return Tag.ADDITION;
+            if (IsSubtractOperation(line))
+                return Tag.SUBTRACTION;
+            if (IsDivideOperation(line))
+                return Tag.DIVISION;
+            if (IsMultiplyOperation(line))
+                return Tag.MULTIPLICATION;
+
             if (IsStatement(line))
                 return Tag.STATEMENT;
+            
             return Tag.NOT_FOUND;
         }
 
@@ -100,5 +125,22 @@ namespace CodeClone
             return Regex.IsMatch(line, CodeKeyword.FUNC_CALL_REGEX);
         }
 
+        public bool IsAddOperation(string line)
+        {
+            return line.Contains(CodeKeyword.ADDITION);
+        }
+
+        public bool IsSubtractOperation(string line)
+        {
+            return line.Contains(CodeKeyword.SUBTRACTION);
+        }
+        public bool IsDivideOperation(string line)
+        {
+            return line.Contains(CodeKeyword.DIVISION);
+        }
+        public bool IsMultiplyOperation(string line)
+        {
+            return line.Contains(CodeKeyword.MULTIPLICATION);
+        }
     }
 }
