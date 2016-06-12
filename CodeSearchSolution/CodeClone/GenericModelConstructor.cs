@@ -12,6 +12,9 @@ namespace CodeClone
 
         public List<String> CreateModel(List<string> sourceCode)
         {
+            if (!sourceCode.First().Trim().StartsWith("{"))
+                sourceCode.Insert(0, "{");
+
             var codeLines = sourceCode.ToArray();
             var model = new List<string>();
             var stack = new Stack<string>();
@@ -46,7 +49,7 @@ namespace CodeClone
 
         public bool IsSimilar(String[] model1, String[] model2)
         {
-            for (int i = 0; i < model1.Length; i++)
+            for (int i = 0; i < Math.Min(model1.Length, model2.Length); i++)
             {
                 if (model1[i] != model2[i])
                     return false;

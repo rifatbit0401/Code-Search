@@ -6,3 +6,11 @@ C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClon
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\bin\Debug\TestBed.pdb
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\obj\Debug\CodeClone.exe
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\CodeClone\obj\Debug\CodeClone.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeClone\bin\Debug\CodeClone.exe.config
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeClone\obj\Debug\CodeClone.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeClone\obj\Debug\CodeClone.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeClone\bin\Debug\CodeClone.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeClone\bin\Debug\CodeClone.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeClone\bin\Debug\TestBed.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeClone\bin\Debug\TestBed.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\CodeClone\obj\Debug\CodeClone.csprojResolveAssemblyReference.cache

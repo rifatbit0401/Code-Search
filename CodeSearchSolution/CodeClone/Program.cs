@@ -12,19 +12,29 @@ namespace CodeClone
         static void Main(string[] args)
         {
             var parser = new DirectoryBasedMethodParser();
-            var methods = parser.ParseAllMethods(@"E:\BSSE Program\3rd semister BIT program\OOP-2\workspace\Calculator2\src");
+            var methods = parser.ParseAllMethods(@"E:\BSSE Program\3rd semister BIT program\OOP-2\workspace");
             var codeCloneDetector = new GenericModelConstructor();
             var models = new List<List<string>>();
             foreach (var method in methods)
             {
-                Console.WriteLine(method.Signature);
+               // Console.WriteLine(method.Signature);
                 var model = codeCloneDetector.CreateModel(method.Body);
                 models.Add(model);
-                Console.WriteLine("***********************");
+               // Console.WriteLine("***********************");
             }
 
-                
-            
+            foreach (var method in methods)
+            {
+                Console.WriteLine(method.Signature);
+                var currentModel = codeCloneDetector.CreateModel(method.Body);
+                foreach (var model in models )
+                {
+                    if(codeCloneDetector.IsSimilar(currentModel.ToArray(), model.ToArray()))
+                        Console.WriteLine("Similar to {0}", models.IndexOf(model));
+                }
+                Console.WriteLine("***********************");
+
+            }
 
             Console.ReadLine();
         }
