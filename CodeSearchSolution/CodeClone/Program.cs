@@ -22,7 +22,7 @@ namespace CodeClone
                 models.Add(model);
                 // Console.WriteLine("***********************");
             }
-            foreach (var method in methods)
+            /*foreach (var method in methods)
             {
                 Console.WriteLine(method.Signature);
                 var currentModel = codeCloneDetector.CreateModel(method.Body);
@@ -33,7 +33,7 @@ namespace CodeClone
                 }
                 Console.WriteLine("***********************");
 
-            }
+            }*/
 
             /*var codePreProcessor = new CodePreProcessor();
             foreach (var method in methods)
@@ -47,6 +47,9 @@ namespace CodeClone
                 Console.WriteLine("***********************");
 
             }*/
+
+            Console.WriteLine("Is exact match: {0}",
+                              new TextMatcher().IsExactMatch(methods.ToArray()[1].Body, methods.ToArray()[1].Body));
 
             Console.ReadLine();
         }
