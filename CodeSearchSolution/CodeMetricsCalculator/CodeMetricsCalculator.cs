@@ -10,8 +10,28 @@ namespace CodeMetricsCalculator
 {
     public class CodeMetricsCalculator
     {
+        private CodePreProcessor _codePreProcessor;
+        private Rule _rule;
 
-        public int NumberOfReturnStatements(List<String> methodBody)
+        public CodeMetricsCalculator()
+        {
+            _codePreProcessor = new CodePreProcessor();
+            _rule = new Rule();
+        }
+
+        public int GetNumberOfLocalVariable(List<String>methodBody)
+        {
+            methodBody = _codePreProcessor.PreProcess(methodBody);
+            int numOfLocalVariable = 0;
+            foreach (var line in methodBody)
+            {
+                if (_rule.IsDeclaration(line))
+                    numOfLocalVariable++;
+            }
+            return numOfLocalVariable;
+        }
+
+        public int GetNumberOfReturnStatements(List<String> methodBody)
         {
             int numOfReturnStatement = 0;
             foreach (var line in methodBody)
