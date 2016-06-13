@@ -10,7 +10,53 @@ namespace CodeMetricsCalculator
 {
     public class CodeMetricsCalculator
     {
-        public int GetNumberOfConditionalStatements(List<String>methodBody)
+
+        public int NumberOfReturnStatements(List<String> methodBody)
+        {
+            int numOfReturnStatement = 0;
+            foreach (var line in methodBody)
+            {
+                string str = "";
+                string trimmed = line.Trim();
+
+                for (int i = 0; i < trimmed.Length; i++)
+                {
+                    if (!(char.IsLetterOrDigit(trimmed[i]) || trimmed[i]=='_'))
+                    {
+                        str += ' ';
+                    }
+                    else
+                    {
+                        str += trimmed[i];
+                    }
+                }
+
+                var x = str.Split(' ');
+
+                foreach (var s in str.ToString().Split(' '))
+                {
+                    if (s.Equals(CodeKeyword.RETURN))
+                        numOfReturnStatement++;
+                }
+
+            }
+
+            return numOfReturnStatement;
+        }
+
+        public int GetNumberOfIterationStatements(List<String> methodBody)
+        {
+            int numOfIterationStatements = 0;
+            foreach (var line in methodBody)
+            {
+                var str = line.Trim();
+                if (str.StartsWith(CodeKeyword.FOR + "(") || str.StartsWith(CodeKeyword.WHILE + "("))
+                    numOfIterationStatements++;
+            }
+            return numOfIterationStatements;
+        }
+
+        public int GetNumberOfConditionalStatements(List<String> methodBody)
         {
             int numOfConditinalStatement = 0;
 

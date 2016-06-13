@@ -3,3 +3,9 @@ C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\TestBed\
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\TestBed\bin\Debug\TestBed.pdb
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\TestBed\obj\Debug\TestBed.exe
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\TestBed\obj\Debug\TestBed.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\TestBed\bin\Debug\TestBed.exe.config
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\TestBed\bin\Debug\TestBed.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\TestBed\bin\Debug\TestBed.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\TestBed\obj\Debug\TestBed.csprojResolveAssemblyReference.cache
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\TestBed\obj\Debug\TestBed.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\TestBed\obj\Debug\TestBed.pdb

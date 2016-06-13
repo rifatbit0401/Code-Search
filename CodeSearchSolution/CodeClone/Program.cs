@@ -12,7 +12,7 @@ namespace CodeClone
         static void Main(string[] args)
         {
             var parser = new DirectoryBasedMethodParser();
-            var methods = parser.ParseAllMethods(@"E:\BSSE Program\3rd semister BIT program\OOP-2\workspace\Calculator2\src");
+            var methods = parser.ParseAllMethods(@"E:\BSSE Program\3rd semister BIT program\OOP-2\workspace\");
             var codeCloneDetector = new GenericModelConstructor();
             var models = new List<List<string>>();
             foreach (var method in methods)

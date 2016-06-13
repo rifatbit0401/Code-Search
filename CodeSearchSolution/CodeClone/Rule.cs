@@ -23,6 +23,8 @@ namespace CodeClone
         public const string SWITCH = "switch";
         public const string FUNC_CALL_REGEX = @"[a-zA-Z]+\([^\)]*\)(\.[^\)]*\))?";
 
+        public const string RETURN = "return";
+
         public const string ADDITION = "+";
         public const string SUBTRACTION = "-";
         public const string DIVISION = "/";
