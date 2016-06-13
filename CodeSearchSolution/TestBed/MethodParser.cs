@@ -11,9 +11,14 @@ namespace TestBed
 {
     public class MethodParser
     {
-        public const string MethodDeclarationExpr = @"(public|protected|private|static|\s) +[\w\<\>\[\]]+\s+(\w+) *\([^\)]*\) *(\{?|[^;])";
-     
-        public List<Method>GetMethods(string filePath)
+        public const string MethodDeclarationExpr =
+            @"(public|protected|private|static|\s) +[\w\<\>\[\]]+\s+(\w+) *\([^\)]*\) *(\{?|[^;])";
+
+        //public const string MethodDeclarationExpr2 =
+        //    @"\s+(?:<\w+>\s+){0,3}(?:[\w\<\>\[\]])+\s+\w+\s*\([^\)]*\)(?:\w|\s|\{)";
+        public const string MethodDeclarationExpr2 =
+            @"(public|protected|private|static|\s)+(?:<\w+>\s+){0,3}(?:[\w\<\>\[\]])+\s+\w+\s*\([^\)]*\)(?:\w|\s|\{)";
+        public List<Method> GetMethods(string filePath)
         {
             var codeLines = new List<string>();
             codeLines.AddRange(File.ReadAllLines(filePath));
@@ -22,11 +27,11 @@ namespace TestBed
 
             for (int currentLineNumber = 0; currentLineNumber < codeLines.Count(); currentLineNumber++)
             {
-                if (Regex.IsMatch(codeLines[currentLineNumber], MethodDeclarationExpr))
+                if (Regex.IsMatch(codeLines[currentLineNumber], MethodDeclarationExpr) || Regex.IsMatch(codeLines[currentLineNumber]+"{", MethodDeclarationExpr2))
                 {
                     var method = new Method();
                     method.Signature = codeLines[currentLineNumber];
-                    
+
                     var stack = new Stack<string>();
 
                     if (codeLines[currentLineNumber].Contains(";")) //for interface
@@ -42,7 +47,7 @@ namespace TestBed
 
                     while (stack.Count() > 0)
                     {
-                      //  Console.WriteLine(codeLines[currentLineNumber]);
+                        //  Console.WriteLine(codeLines[currentLineNumber]);
                         method.Body.Add(codeLines[currentLineNumber]);
                         currentLineNumber++;
 
@@ -62,7 +67,7 @@ namespace TestBed
 
             return methods;
         }
-         
+
 
     }
 }
