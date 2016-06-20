@@ -18,6 +18,8 @@ namespace TestBed
         //    @"\s+(?:<\w+>\s+){0,3}(?:[\w\<\>\[\]])+\s+\w+\s*\([^\)]*\)(?:\w|\s|\{)";
         public const string MethodDeclarationExpr2 =
             @"(public|protected|private|static|\s)+(?:<\w+>\s+){0,3}(?:[\w\<\>\[\]])+\s+\w+\s*\([^\)]*\)(?:\w|\s|\{)";
+        private MethodUtility _methodUtility = new MethodUtility();
+
         public List<Method> GetMethods(string filePath)
         {
             var codeLines = new List<string>();
@@ -68,6 +70,7 @@ namespace TestBed
 
                         method.Body.Add("}");
                         method.Body.Remove(method.Signature);
+                        method = _methodUtility.ConstructMethod(method.Signature, method.Body);
                         methods.Add(method);
                     }
 
