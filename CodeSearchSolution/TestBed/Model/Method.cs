@@ -8,6 +8,9 @@ namespace TestBed.Model
 {
     public class Method
     {
+        public string ReturnType { get; set; }
+        public string MethodName { get; set; }
+        public string Parameters { get; set; }
         public string Signature { get; set; }
         public List<string> Body { get; set; }
 

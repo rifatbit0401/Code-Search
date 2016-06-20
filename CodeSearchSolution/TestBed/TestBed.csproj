@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DirectoryBasedMethodParser.cs" />
     <Compile Include="MethodParser.cs" />
+    <Compile Include="MethodUtility.cs" />
     <Compile Include="Model\Method.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
