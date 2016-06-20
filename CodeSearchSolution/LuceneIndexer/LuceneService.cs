@@ -44,10 +44,17 @@ namespace LuceneIndexer
                 var methodBodyField = new Field("body", body, Field.Store.YES, Field.Index.ANALYZED);
                 var methodNameField = new Field("name", method.MethodName, Field.Store.YES, Field.Index.ANALYZED);
                 var methodReturnTypeField = new Field("return", method.ReturnType, Field.Store.YES, Field.Index.ANALYZED);
-                var methodParameterField = new Field("parameter", method.MethodName, Field.Store.YES, Field.Index.ANALYZED);
+                var methodParameterField = new Field("parameter", method.MethodName, Field.Store.YES,
+                                                     Field.Index.ANALYZED);
+                var wholeMethodField = new Field("whole_method", method.Signature + body, Field.Store.YES,
+                                            Field.Index.ANALYZED);
                 document.Add(idField);
                 document.Add(methodSignatureField);
                 document.Add(methodBodyField);
+                document.Add(methodReturnTypeField);
+                document.Add(methodNameField);
+                document.Add(methodParameterField);
+                document.Add(wholeMethodField);
                 _indexWriter.AddDocument(document);
             }
 
