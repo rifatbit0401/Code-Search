@@ -5,3 +5,10 @@ C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTest
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\obj\Debug\UnitTestProject.dll
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\UnitTestProject\obj\Debug\UnitTestProject.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\UnitTestProject\bin\Debug\UnitTestProject.dll
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\UnitTestProject\bin\Debug\UnitTestProject.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\UnitTestProject\bin\Debug\TestBed.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\UnitTestProject\bin\Debug\TestBed.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\UnitTestProject\obj\Debug\UnitTestProject.dll
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\UnitTestProject\obj\Debug\UnitTestProject.pdb

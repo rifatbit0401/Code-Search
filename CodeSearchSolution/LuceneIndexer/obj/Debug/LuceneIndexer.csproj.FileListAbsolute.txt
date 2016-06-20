@@ -10,3 +10,14 @@ C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\LuceneIn
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\LuceneIndexer\obj\Debug\LuceneIndexer.exe
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\LuceneIndexer\obj\Debug\LuceneIndexer.pdb
 C:\Users\Rifat\Documents\Visual Studio 2012\Projects\CodeSearchSolution\LuceneIndexer\bin\Debug\resource\wn_s.pl
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\bin\Debug\resource\wn_s.pl
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\bin\Debug\LuceneIndexer.exe.config
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\bin\Debug\LuceneIndexer.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\bin\Debug\LuceneIndexer.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\bin\Debug\TestBed.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\bin\Debug\TestBed.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\bin\Debug\Lucene.Net.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\bin\Debug\Lucene.Net.xml
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\obj\Debug\LuceneIndexer.csprojResolveAssemblyReference.cache
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\obj\Debug\LuceneIndexer.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\LuceneIndexer\obj\Debug\LuceneIndexer.pdb

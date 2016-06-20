@@ -15,7 +15,7 @@ namespace LuceneIndexer
 {
     public class LuceneService
     {
-        private string _indexPath = @"E:\MSSE Program\thesis dev\lucene";
+        private string _indexPath = @"E:\MSSE Program\thesis dev\techniques\KBCS\lucene";
         private FSDirectory _luceneIndexDirectory;
         private IndexWriter _indexWriter;
 

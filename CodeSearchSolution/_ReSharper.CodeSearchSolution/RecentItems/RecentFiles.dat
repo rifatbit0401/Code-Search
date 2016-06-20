@@ -4,24 +4,43 @@
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/d:resource/f:wn_s.pl" caret="4935051" fromTop="11" />
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/d:Model/f:Synonym.cs" caret="380" fromTop="20" />
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:WordNetService.cs" caret="4097" fromTop="20" />
-    <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:Program.cs" caret="184" fromTop="6" />
-    <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:LuceneService.cs" caret="945" fromTop="15" />
     <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:GenericModelConstructor.cs" caret="1386" fromTop="41" />
     <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:CodePreProcessor.cs" caret="142" fromTop="6" />
-    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Program.cs" caret="518" fromTop="0" />
     <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Rule.cs" caret="820" fromTop="12" />
-    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:Program.cs" caret="1243" fromTop="17" />
-    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:CodeMetricsCalculator.cs" caret="917" fromTop="15" />
+    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:CodeMetricsCalculator.cs" caret="819" fromTop="16" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:TextMatcher.cs" caret="609" fromTop="17" />
+    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:Program.cs" caret="563" fromTop="1" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Program.cs" caret="1885" fromTop="17" />
+    <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/d:model/f:CloneModel.cs" caret="186" fromTop="9" />
+    <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:CloneDetector.cs" caret="4017" fromTop="20" />
+    <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:Program.cs" caret="1012" fromTop="17" />
+    <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:Program.cs" caret="243" fromTop="9" />
+    <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:LuceneStemmer.cs" caret="1386" fromTop="16" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:MethodParser.cs" caret="865" fromTop="17" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:DirectoryBasedMethodParser.cs" caret="831" fromTop="16" />
+    <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:LuceneService.cs" caret="0" fromTop="0" />
+    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:Program.cs" caret="324" fromTop="12" />
+    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:KBCSTechnique.cs" caret="2769" fromTop="9" />
   </RecentFiles>
   <RecentEdits>
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/d:Model/f:Synonym.cs" caret="355" fromTop="15" />
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:Program.cs" caret="671" fromTop="19" />
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:WordNetService.cs" caret="3740" fromTop="14" />
     <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:GenericModelConstructor.cs" caret="360" fromTop="6" />
-    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Program.cs" caret="431" fromTop="9" />
     <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:CodePreProcessor.cs" caret="1418" fromTop="18" />
     <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Rule.cs" caret="820" fromTop="12" />
-    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:Program.cs" caret="1239" fromTop="17" />
-    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:CodeMetricsCalculator.cs" caret="696" fromTop="7" />
+    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:CodeMetricsCalculator.cs" caret="840" fromTop="20" />
+    <File id="875B948D-0351-488A-B193-4A51CDAD3C41/f:Program.cs" caret="436" fromTop="10" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:TextMatcher.cs" caret="598" fromTop="16" />
+    <File id="6A23A150-550A-4432-921C-61A59AB9F4E0/f:Program.cs" caret="1953" fromTop="17" />
+    <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/d:model/f:CloneModel.cs" caret="186" fromTop="9" />
+    <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:LuceneStemmer.cs" caret="1386" fromTop="44" />
+    <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:CloneDetector.cs" caret="2523" fromTop="5" />
+    <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:Program.cs" caret="307" fromTop="13" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:MethodParser.cs" caret="2895" fromTop="17" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:DirectoryBasedMethodParser.cs" caret="831" fromTop="16" />
+    <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:LuceneService.cs" caret="475" fromTop="3" />
+    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:KBCSTechnique.cs" caret="2561" fromTop="4" />
+    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:Program.cs" caret="324" fromTop="12" />
   </RecentEdits>
 </RecentFiles>

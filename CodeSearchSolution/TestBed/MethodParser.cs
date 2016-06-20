@@ -25,44 +25,57 @@ namespace TestBed
 
             var methods = new List<Method>();
 
-            for (int currentLineNumber = 0; currentLineNumber < codeLines.Count(); currentLineNumber++)
+            try
             {
-                if (Regex.IsMatch(codeLines[currentLineNumber], MethodDeclarationExpr) || Regex.IsMatch(codeLines[currentLineNumber]+"{", MethodDeclarationExpr2))
+
+
+                for (int currentLineNumber = 0; currentLineNumber < codeLines.Count(); currentLineNumber++)
                 {
-                    var method = new Method();
-                    method.Signature = codeLines[currentLineNumber];
-
-                    var stack = new Stack<string>();
-
-                    if (codeLines[currentLineNumber].Contains(";")) //for interface
-                        continue;
-
-                    while (!codeLines[currentLineNumber].Contains("{"))
-                        currentLineNumber++;
-
-                    if (currentLineNumber == codeLines.Count())
-                        break;
-
-                    stack.Push(codeLines[currentLineNumber]);
-
-                    while (stack.Count() > 0)
+                    if (Regex.IsMatch(codeLines[currentLineNumber], MethodDeclarationExpr) ||
+                        Regex.IsMatch(codeLines[currentLineNumber] + "{", MethodDeclarationExpr2))
                     {
-                        //  Console.WriteLine(codeLines[currentLineNumber]);
-                        method.Body.Add(codeLines[currentLineNumber]);
-                        currentLineNumber++;
+                        var method = new Method();
+                        method.Signature = codeLines[currentLineNumber];
 
-                        if (codeLines[currentLineNumber].Contains("{"))
-                            stack.Push(codeLines[currentLineNumber]);
+                        var stack = new Stack<string>();
 
-                        if (codeLines[currentLineNumber].Contains("}"))
-                            stack.Pop();
+                        if (codeLines[currentLineNumber].Contains(";")) //for interface
+                            continue;
+
+                        while (!codeLines[currentLineNumber].Contains("{"))
+                            currentLineNumber++;
+
+                        if (currentLineNumber == codeLines.Count())
+                            break;
+
+                        stack.Push(codeLines[currentLineNumber]);
+
+
+                        while (stack.Count() > 0)
+                        {
+                            //  Console.WriteLine(codeLines[currentLineNumber]);
+                            method.Body.Add(codeLines[currentLineNumber]);
+                            currentLineNumber++;
+
+
+                            if (codeLines[currentLineNumber].Contains("{"))
+                                stack.Push(codeLines[currentLineNumber]);
+
+                            if (codeLines[currentLineNumber].Contains("}"))
+                                stack.Pop();
+
+                        }
+
+                        method.Body.Add("}");
+                        method.Body.Remove(method.Signature);
+                        methods.Add(method);
                     }
 
-                    method.Body.Add("}");
-                    method.Body.Remove(method.Signature);
-                    methods.Add(method);
                 }
-
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
             }
 
             return methods;

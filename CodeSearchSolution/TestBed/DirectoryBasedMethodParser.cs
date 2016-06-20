@@ -29,6 +29,7 @@ namespace TestBed
         {
             foreach (var javaFile in directory.GetFiles("*.java").ToList())
             {
+               // Console.WriteLine("Prcessing..{0}",javaFile.FullName);
                 methods.AddRange(_methodParser.GetMethods(javaFile.FullName));
             }
 

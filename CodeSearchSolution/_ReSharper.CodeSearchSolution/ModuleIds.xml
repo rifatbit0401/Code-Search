@@ -4,4 +4,6 @@
   <Module PersistentId="5705B908-004B-4862-8CE4-D2B9749F2049" ModuleId="UnitTestProject" />
   <Module PersistentId="6A23A150-550A-4432-921C-61A59AB9F4E0" ModuleId="CodeClone" />
   <Module PersistentId="875B948D-0351-488A-B193-4A51CDAD3C41" ModuleId="CodeMetricsCalculator" />
+  <Module PersistentId="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2" ModuleId="Word2Vec" />
+  <Module PersistentId="12016F73-6B49-450A-9005-1064E87935AC" ModuleId="KBCS" />
 </Modules>

@@ -1,5 +1,5 @@
-2016/06/12-10:18:31.119 11ec Recovering log #22
-2016/06/12-10:18:31.157 11ec Level-0 table #24: started
-2016/06/12-10:18:31.455 11ec Level-0 table #24: 55162 bytes OK
-2016/06/12-10:18:31.961 11ec Delete type=0 #22
-2016/06/12-10:18:31.961 11ec Delete type=3 #20
+2016/06/19-15:21:18.526 c28 Recovering log #41
+2016/06/19-15:21:18.526 c28 Level-0 table #44: started
+2016/06/19-15:21:18.596 c28 Level-0 table #44: 8032 bytes OK
+2016/06/19-15:21:18.696 c28 Delete type=0 #41
+2016/06/19-15:21:18.696 c28 Delete type=3 #39
