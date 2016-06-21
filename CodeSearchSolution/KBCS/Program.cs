@@ -12,16 +12,23 @@ namespace KBCS
     {
         static void Main(string[] args)
         {
-            var kbcsTechnique = new KbcsTechnique();
-          //  kbcsTechnique.Search("zip");
+            var technique = new IDCSTechnique();// new KbcsTechnique();
+            // kbcsTechnique.Index();
+            //  kbcsTechnique.Search("zip");
 
+            Console.WriteLine("Enter Boolean Query:");
             while (true)
             {
-                var queryString = Console.ReadLine();
+                Console.Write("Name:");
+                var methodNameQueryString = Console.ReadLine();
+                Console.Write("Return Type:");
+                var methodReturnTypeQueryString = Console.ReadLine();
+                Console.Write("Parameter:");
+                var methodParameterQueryString = Console.ReadLine();
                 int id = 0;
-                foreach (var method in kbcsTechnique.Search(queryString))
+                foreach (var method in technique.Search(methodNameQueryString, methodReturnTypeQueryString, methodParameterQueryString))
                 {
-                    Console.WriteLine("{0}:{1}",id++,method.Signature);
+                    Console.WriteLine("{0}:{1}", id++, method.Signature);
                 }
             }
         }
