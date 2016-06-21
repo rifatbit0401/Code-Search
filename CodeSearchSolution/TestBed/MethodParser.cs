@@ -78,7 +78,7 @@ namespace TestBed
             }
             catch (Exception exception)
             {
-                Console.WriteLine(exception.Message);
+               // Console.WriteLine(exception.Message);
             }
 
             return methods;

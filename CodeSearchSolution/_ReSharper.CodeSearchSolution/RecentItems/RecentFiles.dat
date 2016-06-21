@@ -16,11 +16,14 @@
     <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:Program.cs" caret="1012" fromTop="17" />
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:Program.cs" caret="243" fromTop="9" />
     <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:LuceneStemmer.cs" caret="1386" fromTop="16" />
-    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:MethodParser.cs" caret="865" fromTop="17" />
-    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:DirectoryBasedMethodParser.cs" caret="831" fromTop="16" />
-    <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:LuceneService.cs" caret="0" fromTop="0" />
-    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:Program.cs" caret="324" fromTop="12" />
-    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:KBCSTechnique.cs" caret="2769" fromTop="9" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:Program.cs" caret="12" fromTop="0" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:MethodUtility.cs" caret="788" fromTop="15" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:Utility.cs" caret="0" fromTop="0" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/d:Model/f:Method.cs" caret="628" fromTop="19" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:MethodParser.cs" caret="3027" fromTop="7" />
+    <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:LuceneService.cs" caret="2335" fromTop="12" />
+    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:KBCSTechnique.cs" caret="2467" fromTop="17" />
+    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:Program.cs" caret="611" fromTop="21" />
   </RecentFiles>
   <RecentEdits>
     <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/d:Model/f:Synonym.cs" caret="355" fromTop="15" />
@@ -37,10 +40,10 @@
     <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:LuceneStemmer.cs" caret="1386" fromTop="44" />
     <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:CloneDetector.cs" caret="2523" fromTop="5" />
     <File id="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2/f:Program.cs" caret="307" fromTop="13" />
-    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:MethodParser.cs" caret="2895" fromTop="17" />
-    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:DirectoryBasedMethodParser.cs" caret="831" fromTop="16" />
-    <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:LuceneService.cs" caret="475" fromTop="3" />
-    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:KBCSTechnique.cs" caret="2561" fromTop="4" />
-    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:Program.cs" caret="324" fromTop="12" />
+    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:KBCSTechnique.cs" caret="1343" fromTop="5" />
+    <File id="12016F73-6B49-450A-9005-1064E87935AC/f:Program.cs" caret="346" fromTop="13" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/d:Model/f:Method.cs" caret="617" fromTop="18" />
+    <File id="DA2DB004-0281-43E5-BB0E-598AE0FB3207/f:MethodParser.cs" caret="3027" fromTop="7" />
+    <File id="50284594-DA58-4865-8B6A-2F11E45A4FE4/f:LuceneService.cs" caret="1946" fromTop="6" />
   </RecentEdits>
 </RecentFiles>

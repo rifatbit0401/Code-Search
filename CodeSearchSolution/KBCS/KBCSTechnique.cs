@@ -38,17 +38,19 @@ namespace KBCS
             var directoryBasedMethodParser = new DirectoryBasedMethodParser();
             var methods = directoryBasedMethodParser.ParseAllMethods(_dataPath).ToArray();
 
-            for (int i = 0; i < methods.Length; i++)
-            {
-                methods[i].Body.Insert(0, methods[i].Signature);
-            }
-
             Console.WriteLine("Parsing complete");
             luceneService.BuildIndex(methods.ToList());
             Console.WriteLine("indexing done");
         }
 
         public List<Method> Search(string queryStr)
+        {
+            var methods = LuceneSearch(queryStr);
+
+            return methods;
+        }
+
+        private List<Method> LuceneSearch(string queryStr)
         {
             var methods = new List<Method>();
 
@@ -61,12 +63,13 @@ namespace KBCS
             var locFilePath = Path.Combine(_indexPath, "write.lock");
             if (File.Exists(locFilePath))
             {
-             //   File.Delete(locFilePath);
+                //   File.Delete(locFilePath);
             }
             //_indexWriter = new IndexWriter(_luceneIndexDirectory, analyzer, true, IndexWriter.MaxFieldLength.UNLIMITED);
 
             var indexSearcher = new IndexSearcher(_luceneIndexDirectory);
-            var queryParser = new QueryParser(Lucene.Net.Util.Version.LUCENE_30, "signature", new StandardAnalyzer(Version.LUCENE_30));
+            var queryParser = new QueryParser(Lucene.Net.Util.Version.LUCENE_30, "signature",
+                                              new StandardAnalyzer(Version.LUCENE_30));
             var query = queryParser.Parse(queryStr);
             var hits = indexSearcher.Search(query, 1000000);
 
@@ -78,9 +81,7 @@ namespace KBCS
                 var method = new Method {Signature = document.Get("signature")};
                 methods.Add(method);
             }
-
             return methods;
         }
-
     }
 }

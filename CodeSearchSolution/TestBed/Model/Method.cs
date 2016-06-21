@@ -17,6 +17,10 @@ namespace TestBed.Model
         public Method()
         {
             Body = new List<string>();
+            ReturnType = "";
+            MethodName = "";
+            Parameters = "";
+            Signature = "";
         }
     }
 }

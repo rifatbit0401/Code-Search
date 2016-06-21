@@ -15,7 +15,7 @@ namespace LuceneIndexer
 {
     public class LuceneService
     {
-        private string _indexPath = @"E:\MSSE Program\thesis dev\techniques\KBCS\lucene";
+        private string _indexPath = @"E:\MSSE Program\thesis dev\techniques\KBCS\lucene3";
         private FSDirectory _luceneIndexDirectory;
         private IndexWriter _indexWriter;
 
@@ -44,7 +44,7 @@ namespace LuceneIndexer
                 var methodBodyField = new Field("body", body, Field.Store.YES, Field.Index.ANALYZED);
                 var methodNameField = new Field("name", method.MethodName, Field.Store.YES, Field.Index.ANALYZED);
                 var methodReturnTypeField = new Field("return", method.ReturnType, Field.Store.YES, Field.Index.ANALYZED);
-                var methodParameterField = new Field("parameter", method.MethodName, Field.Store.YES,
+                var methodParameterField = new Field("parameter", method.Parameters, Field.Store.YES,
                                                      Field.Index.ANALYZED);
                 var wholeMethodField = new Field("whole_method", method.Signature + body, Field.Store.YES,
                                             Field.Index.ANALYZED);

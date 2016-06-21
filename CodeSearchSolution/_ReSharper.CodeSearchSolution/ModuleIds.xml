@@ -6,4 +6,5 @@
   <Module PersistentId="875B948D-0351-488A-B193-4A51CDAD3C41" ModuleId="CodeMetricsCalculator" />
   <Module PersistentId="8E29D365-59D7-4BA8-B1A6-D8C359FACCD2" ModuleId="Word2Vec" />
   <Module PersistentId="12016F73-6B49-450A-9005-1064E87935AC" ModuleId="KBCS" />
+  <Module PersistentId="DDE861D9-CD31-48D3-AFFF-CC8AD164522E" ModuleId="QueryFormulation" />
 </Modules>
