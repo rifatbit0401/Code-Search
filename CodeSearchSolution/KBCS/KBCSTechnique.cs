@@ -18,27 +18,8 @@ using Version = Lucene.Net.Util.Version;
 
 namespace KBCS
 {
-    public class KbcsTechnique
+    public class KbcsTechnique : ATechnique
     {
-        private const string DataPath = @"I:\SF110-20130704-src\SF110-20130704-src";
-        private readonly BooleanQueryGenerator _booleanQueryGenerator;
-        private readonly LuceneService _luceneService;
-
-        public KbcsTechnique()
-        {
-            _booleanQueryGenerator = new BooleanQueryGenerator();
-            _luceneService = new LuceneService();
-        }
-
-        public void Index()
-        {
-            var directoryBasedMethodParser = new DirectoryBasedMethodParser();
-            var methods = directoryBasedMethodParser.ParseAllMethods(DataPath).ToArray();
-
-            Console.WriteLine("Parsing complete");
-            _luceneService.BuildIndex(methods.ToList());
-            Console.WriteLine("indexing done");
-        }
 
         public List<Method> Search(string queryStr)
         {

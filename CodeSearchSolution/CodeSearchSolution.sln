@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Techniques", "Techniques", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Word2Vec", "Word2Vec\Word2Vec.csproj", "{8E29D365-59D7-4BA8-B1A6-D8C359FACCD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KBCS", "KBCS\KBCS.csproj", "{12016F73-6B49-450A-9005-1064E87935AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Techniques", "KBCS\Techniques.csproj", "{12016F73-6B49-450A-9005-1064E87935AC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryFormulation", "QueryFormulation\QueryFormulation.csproj", "{DDE861D9-CD31-48D3-AFFF-CC8AD164522E}"
 EndProject
