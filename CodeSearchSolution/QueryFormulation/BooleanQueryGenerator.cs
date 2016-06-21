@@ -9,7 +9,7 @@ namespace QueryFormulation
 {
     public class BooleanQueryGenerator
     {
-        public string GetBooleanQuery(string fieldName, string queryString)
+        public string GetBooleanQuery(string fieldNamewWithOutClone, string queryString)
         {
             string luceneBooleanQuery = queryString;
             var matches = Regex.Matches(queryString, @"\w+");
@@ -20,7 +20,7 @@ namespace QueryFormulation
                 {
                     continue;
                 }
-                luceneBooleanQuery = luceneBooleanQuery.Replace(match.ToString(), fieldName + ":" + match.ToString());
+                luceneBooleanQuery = luceneBooleanQuery.Replace(match.ToString(), fieldNamewWithOutClone + ":" + match.ToString());
 
             }
             return luceneBooleanQuery;

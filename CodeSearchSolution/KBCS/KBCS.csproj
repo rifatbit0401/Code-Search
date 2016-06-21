@@ -57,6 +57,10 @@
       <Project>{50284594-da58-4865-8b6a-2f11e45a4fe4}</Project>
       <Name>LuceneIndexer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\QueryFormulation\QueryFormulation.csproj">
+      <Project>{dde861d9-cd31-48d3-afff-cc8ad164522e}</Project>
+      <Name>QueryFormulation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TestBed\TestBed.csproj">
       <Project>{da2db004-0281-43e5-bb0e-598ae0fb3207}</Project>
       <Name>TestBed</Name>

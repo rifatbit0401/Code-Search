@@ -11,7 +11,8 @@ namespace QueryFormulation
         static void Main(string[] args)
         {
             var booleanQueryGenerator = new BooleanQueryGenerator();
-            booleanQueryGenerator.GetBooleanQuery("hello", "(str1 AND str2 OR (str3 AND str4))");
+            var booleanQuery = booleanQueryGenerator.GetBooleanQuery("hello", "(str1 AND str2 OR (str3 AND str4))");
+            Console.WriteLine(booleanQuery);
             Console.ReadLine();
         }
     }

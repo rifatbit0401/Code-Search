@@ -11,6 +11,7 @@ using Lucene.Net.QueryParsers;
 using Lucene.Net.Search;
 using Lucene.Net.Store;
 using LuceneIndexer;
+using QueryFormulation;
 using TestBed;
 using TestBed.Model;
 using Version = Lucene.Net.Util.Version;
@@ -19,69 +20,31 @@ namespace KBCS
 {
     public class KbcsTechnique
     {
-        private string _indexPath = @"E:\MSSE Program\thesis dev\techniques\KBCS\lucene";
-        private FSDirectory _luceneIndexDirectory;
-        private IndexWriter _indexWriter;
-        private string _dataPath = @"I:\SF110-20130704-src\SF110-20130704-src";
+        private const string DataPath = @"I:\SF110-20130704-src\SF110-20130704-src";
+        private readonly BooleanQueryGenerator _booleanQueryGenerator;
+        private readonly LuceneService _luceneService;
 
         public KbcsTechnique()
         {
-            var analyzer = new StandardAnalyzer(Version.LUCENE_30);
-            _luceneIndexDirectory = FSDirectory.Open(new DirectoryInfo(_indexPath));
-            _indexWriter = new IndexWriter(_luceneIndexDirectory, analyzer, true, IndexWriter.MaxFieldLength.UNLIMITED);
-
+            _booleanQueryGenerator = new BooleanQueryGenerator();
+            _luceneService = new LuceneService();
         }
 
         public void Index()
         {
-            var luceneService = new LuceneService();
             var directoryBasedMethodParser = new DirectoryBasedMethodParser();
-            var methods = directoryBasedMethodParser.ParseAllMethods(_dataPath).ToArray();
+            var methods = directoryBasedMethodParser.ParseAllMethods(DataPath).ToArray();
 
             Console.WriteLine("Parsing complete");
-            luceneService.BuildIndex(methods.ToList());
+            _luceneService.BuildIndex(methods.ToList());
             Console.WriteLine("indexing done");
         }
 
         public List<Method> Search(string queryStr)
         {
-            var methods = LuceneSearch(queryStr);
-
+            var methods = _luceneService.LuceneSearch(_booleanQueryGenerator.GetBooleanQuery("whole_method", queryStr));//LuceneSearch(_booleanQueryGenerator.GetBooleanQuery("whole_method", queryStr));
             return methods;
         }
 
-        private List<Method> LuceneSearch(string queryStr)
-        {
-            var methods = new List<Method>();
-
-            var analyzer = new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30);
-
-            _luceneIndexDirectory = FSDirectory.Open(new DirectoryInfo(_indexPath));
-            if (IndexWriter.IsLocked(_luceneIndexDirectory))
-                IndexWriter.Unlock(_luceneIndexDirectory);
-
-            var locFilePath = Path.Combine(_indexPath, "write.lock");
-            if (File.Exists(locFilePath))
-            {
-                //   File.Delete(locFilePath);
-            }
-            //_indexWriter = new IndexWriter(_luceneIndexDirectory, analyzer, true, IndexWriter.MaxFieldLength.UNLIMITED);
-
-            var indexSearcher = new IndexSearcher(_luceneIndexDirectory);
-            var queryParser = new QueryParser(Lucene.Net.Util.Version.LUCENE_30, "signature",
-                                              new StandardAnalyzer(Version.LUCENE_30));
-            var query = queryParser.Parse(queryStr);
-            var hits = indexSearcher.Search(query, 1000000);
-
-            IEnumerable<Document> docs = hits.ScoreDocs.Select(hit => indexSearcher.Doc(hit.Doc));
-            //var x = docs.First().Get("id");
-
-            foreach (var document in docs)
-            {
-                var method = new Method {Signature = document.Get("signature")};
-                methods.Add(method);
-            }
-            return methods;
-        }
     }
 }

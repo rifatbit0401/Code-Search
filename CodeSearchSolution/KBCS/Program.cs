@@ -13,9 +13,10 @@ namespace KBCS
         static void Main(string[] args)
         {
             var kbcsTechnique = new KbcsTechnique();
-            kbcsTechnique.Index();
+           // kbcsTechnique.Index();
           //  kbcsTechnique.Search("zip");
 
+            Console.WriteLine("Enter Boolean Query:");
             while (true)
             {
                 var queryString = Console.ReadLine();
