@@ -13,3 +13,4 @@ E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\KBCS\bin\Debug\Lucene.
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\KBCS\bin\Debug\Lucene.Net.xml
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\KBCS\obj\Debug\KBCS.exe
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\KBCS\obj\Debug\KBCS.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\KBCS\obj\Debug\Techniques.csprojResolveAssemblyReference.cache
