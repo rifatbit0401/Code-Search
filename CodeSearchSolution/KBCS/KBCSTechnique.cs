@@ -15,6 +15,7 @@ using QueryFormulation;
 using TestBed;
 using TestBed.Model;
 using Version = Lucene.Net.Util.Version;
+using System.Text.RegularExpressions;
 
 namespace KBCS
 {
@@ -23,9 +24,18 @@ namespace KBCS
 
         public List<Method> Search(string queryStr)
         {
-            var methods = _luceneService.LuceneSearch(_booleanQueryGenerator.GetBooleanQuery("whole_method", queryStr));//LuceneSearch(_booleanQueryGenerator.GetBooleanQuery("whole_method", queryStr));
+            var methods = _luceneService.LuceneSearch(_booleanQueryGenerator.GetBooleanQueryForLucene("whole_method", queryStr));//LuceneSearch(_booleanQueryGenerator.GetBooleanQueryForLucene("whole_method", queryStr));
             return methods;
         }
+
+        public List<Method> SearchWithQueryExpansion(string queryStr)
+        {
+            var expandedQuery = _booleanQueryGenerator.GetExpandedQuery(queryStr);
+            var expandedBooleanQuery = _booleanQueryGenerator.GetBooleanQueryForLucene("whole_method",expandedQuery);
+            var methods = _luceneService.LuceneSearch(expandedBooleanQuery);
+            return methods;
+        }
+
 
     }
 }

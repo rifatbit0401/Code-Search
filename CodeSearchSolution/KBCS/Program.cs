@@ -12,7 +12,35 @@ namespace KBCS
     {
         static void Main(string[] args)
         {
-            var technique = new IDCSTechnique();// new KbcsTechnique();
+            //TestIDCSTechnique();
+            var technique = new KbcsTechnique();
+            while (true)
+            {
+                var queryStr = Console.ReadLine();
+                int id = 0;
+                foreach (
+                    var method in
+                        technique.Search(queryStr))
+                {
+                    Console.WriteLine("{0}:{1}", id++, method.Signature);
+                }
+
+                int kbcs = id;
+
+                id = 0;
+                foreach (
+                    var method in
+                        technique.SearchWithQueryExpansion(queryStr))
+                {
+                    Console.WriteLine("{0}:{1}", id++, method.Signature);
+                }
+                Console.WriteLine("No Exp:{0}, with exp{1}",kbcs,id);
+            }
+        }
+
+        private static void TestIDCSTechnique()
+        {
+            var technique = new IDCSTechnique(); // new KbcsTechnique();
             // kbcsTechnique.Index();
             //  kbcsTechnique.Search("zip");
 
@@ -26,7 +54,9 @@ namespace KBCS
                 Console.Write("Parameter:");
                 var methodParameterQueryString = Console.ReadLine();
                 int id = 0;
-                foreach (var method in technique.Search(methodNameQueryString, methodReturnTypeQueryString, methodParameterQueryString))
+                foreach (
+                    var method in
+                        technique.Search(methodNameQueryString, methodReturnTypeQueryString, methodParameterQueryString))
                 {
                     Console.WriteLine("{0}:{1}", id++, method.Signature);
                 }

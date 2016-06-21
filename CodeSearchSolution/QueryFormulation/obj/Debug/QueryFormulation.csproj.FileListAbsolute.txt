@@ -4,3 +4,11 @@ E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\bin\D
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\obj\Debug\QueryFormulation.csprojResolveAssemblyReference.cache
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\obj\Debug\QueryFormulation.exe
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\obj\Debug\QueryFormulation.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\bin\Debug\resource\wn_s.pl
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\bin\Debug\LuceneIndexer.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\bin\Debug\Lucene.Net.dll
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\bin\Debug\TestBed.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\bin\Debug\LuceneIndexer.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\bin\Debug\Lucene.Net.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\bin\Debug\Lucene.Net.xml
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\QueryFormulation\bin\Debug\TestBed.pdb

@@ -4,12 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using LuceneIndexer;
+using LuceneIndexer.Model;
 
 namespace QueryFormulation
 {
     public class BooleanQueryGenerator
     {
-        public string GetBooleanQuery(string fieldNamewWithOutClone, string queryString)
+        private WordNetService _wordNetService = new WordNetService();
+
+        public string GetBooleanQueryForLucene(string fieldNameWithOutClone, string queryString)
         {
             string luceneBooleanQuery = queryString;
             var matches = Regex.Matches(queryString, @"\w+");
@@ -20,10 +24,43 @@ namespace QueryFormulation
                 {
                     continue;
                 }
-                luceneBooleanQuery = luceneBooleanQuery.Replace(match.ToString(), fieldNamewWithOutClone + ":" + match.ToString());
+                luceneBooleanQuery = Regex.Replace(luceneBooleanQuery, "\\b" + match.ToString() + "\\b",
+                                                   fieldNameWithOutClone + ":" + match.ToString());
 
             }
             return luceneBooleanQuery;
+        }
+
+        public string GetExpandedQuery(string queryStr)
+        {
+            string expandedQueryStr = queryStr;
+            var dictionary = _wordNetService.ConstructSynDictionary();
+
+            foreach (var term in Regex.Matches(queryStr, @"\w+"))
+            {
+                if(term.ToString()=="OR" || term.ToString()=="AND")
+                    continue;
+                var expandedTerm = GetExpadedQueryForTerm(dictionary, term.ToString());
+                expandedQueryStr = Regex.Replace(expandedQueryStr, "\\b" + term.ToString() + "\\b", expandedTerm);
+            }
+            return expandedQueryStr;
+        }
+
+        private string GetExpadedQueryForTerm(List<Synonym> dictionary, string term)
+        {
+            Synonym synonym = dictionary.FirstOrDefault(s => s.Word.Equals(term));
+            var vocubularyStr = "(" + term;
+            if (synonym != null)
+            {
+                foreach (var syn in synonym.Syn)
+                {
+                    if (syn == "")
+                        continue;
+                    vocubularyStr += " OR " + syn;
+                }
+            }
+            vocubularyStr += ")";
+            return vocubularyStr;
         }
     }
 }

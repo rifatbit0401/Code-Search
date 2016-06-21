@@ -11,11 +11,11 @@ namespace KBCS
     {
         public List<Method> Search(string methodNameQueryStr, string methodReturnTypeQueryStr, string methodParameterQueryStr)
         {
-            var luceneBooleanQuery = "(" + _booleanQueryGenerator.GetBooleanQuery("name", methodNameQueryStr) +
+            var luceneBooleanQuery = "(" + _booleanQueryGenerator.GetBooleanQueryForLucene("name", methodNameQueryStr) +
                                      ") AND (" +
-                                     _booleanQueryGenerator.GetBooleanQuery("return", methodReturnTypeQueryStr) +
+                                     _booleanQueryGenerator.GetBooleanQueryForLucene("return", methodReturnTypeQueryStr) +
                                      ") AND (" +
-                                     _booleanQueryGenerator.GetBooleanQuery("parameter", methodParameterQueryStr) + ")";
+                                     _booleanQueryGenerator.GetBooleanQueryForLucene("parameter", methodParameterQueryStr) + ")";
             return _luceneService.LuceneSearch(luceneBooleanQuery);
 
         }
