@@ -19,5 +19,29 @@ namespace KBCS
             return _luceneService.LuceneSearch(luceneBooleanQuery);
 
         }
+
+        public List<Method> SearchWithQueryExpansion(string methodNameQueryStr, string methodReturnTypeQueryStr, string methodParameterQueryStr)
+        {
+            var luceneExpandedBooleanQuery = "(" +
+                                             _booleanQueryGenerator.GetBooleanQueryForLucene("name",
+                                                                                             _booleanQueryGenerator.
+                                                                                                 GetExpandedQuery(
+                                                                                                     methodNameQueryStr)) +
+                                             ") AND (" +
+                                             _booleanQueryGenerator.GetBooleanQueryForLucene("return",
+                                                                                             _booleanQueryGenerator.
+                                                                                                 GetExpandedQuery(
+                                                                                                     methodReturnTypeQueryStr)) +
+                                             ") AND (" +
+                                             _booleanQueryGenerator.GetBooleanQueryForLucene("parameter",
+                                                                                             _booleanQueryGenerator.
+                                                                                                 GetExpandedQuery(
+                                                                                                     methodParameterQueryStr)) +
+                                             ")";
+
+            Console.WriteLine(luceneExpandedBooleanQuery);
+
+            return _luceneService.LuceneSearch(luceneExpandedBooleanQuery);
+        }
     }
 }

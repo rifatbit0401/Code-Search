@@ -12,6 +12,14 @@ namespace QueryFormulation
     public class BooleanQueryGenerator
     {
         private WordNetService _wordNetService = new WordNetService();
+        private List<Synonym> _dictionary;
+
+        public BooleanQueryGenerator()
+        {
+            _dictionary = _wordNetService.ConstructSynDictionary();
+            
+        }
+
 
         public string GetBooleanQueryForLucene(string fieldNameWithOutClone, string queryString)
         {
@@ -34,13 +42,12 @@ namespace QueryFormulation
         public string GetExpandedQuery(string queryStr)
         {
             string expandedQueryStr = queryStr;
-            var dictionary = _wordNetService.ConstructSynDictionary();
 
             foreach (var term in Regex.Matches(queryStr, @"\w+"))
             {
                 if(term.ToString()=="OR" || term.ToString()=="AND")
                     continue;
-                var expandedTerm = GetExpadedQueryForTerm(dictionary, term.ToString());
+                var expandedTerm = GetExpadedQueryForTerm(_dictionary, term.ToString());
                 expandedQueryStr = Regex.Replace(expandedQueryStr, "\\b" + term.ToString() + "\\b", expandedTerm);
             }
             return expandedQueryStr;

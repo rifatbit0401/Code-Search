@@ -13,6 +13,34 @@ namespace KBCS
         static void Main(string[] args)
         {
             //TestIDCSTechnique();
+            //TestQueryExpForKBCS();
+
+            var technique = new IDCSTechnique(); // new KbcsTechnique();
+            // kbcsTechnique.Index();
+            //  kbcsTechnique.Search("zip");
+
+            Console.WriteLine("Enter Boolean Query:");
+            while (true)
+            {
+                Console.Write("Name:");
+                var methodNameQueryString = Console.ReadLine();
+                Console.Write("Return Type:");
+                var methodReturnTypeQueryString = Console.ReadLine();
+                Console.Write("Parameter:");
+                var methodParameterQueryString = Console.ReadLine();
+                int id = 0;
+                foreach (
+                    var method in
+                        technique.SearchWithQueryExpansion(methodNameQueryString, methodReturnTypeQueryString, methodParameterQueryString))
+                {
+                    Console.WriteLine("{0}:{1}", id++, method.Signature);
+                }
+            }
+
+        }
+
+        private static void TestQueryExpForKBCS()
+        {
             var technique = new KbcsTechnique();
             while (true)
             {
@@ -34,7 +62,7 @@ namespace KBCS
                 {
                     Console.WriteLine("{0}:{1}", id++, method.Signature);
                 }
-                Console.WriteLine("No Exp:{0}, with exp{1}",kbcs,id);
+                Console.WriteLine("No Exp:{0}, with exp{1}", kbcs, id);
             }
         }
 
