@@ -7,3 +7,5 @@ E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\Word2Vec\bin\Debug\Luc
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\Word2Vec\obj\Debug\Word2Vec.csprojResolveAssemblyReference.cache
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\Word2Vec\obj\Debug\Word2Vec.exe
 E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\Word2Vec\obj\Debug\Word2Vec.pdb
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\Word2Vec\bin\Debug\TestBed.exe
+E:\MSSE Program\thesis dev\Code Search\CodeSearchSolution\Word2Vec\bin\Debug\TestBed.pdb

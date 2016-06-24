@@ -39,6 +39,19 @@ namespace Word2Vec
 
             return tokenStr;
         }
+
+        public string CovertCamelCaseToSpaceSeparted(string str)
+        {
+            string spaceSeperatedString = "";
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (Char.IsUpper(str[i]) || !Char.IsLetter(str[i]))
+                    spaceSeperatedString += " ";
+                spaceSeperatedString += str[i];
+            }
+
+            return spaceSeperatedString.ToLower();
+        }
     }
 
 }
