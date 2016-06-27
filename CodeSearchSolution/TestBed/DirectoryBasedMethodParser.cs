@@ -10,14 +10,34 @@ namespace TestBed
 {
     public class DirectoryBasedMethodParser
     {
-        private MethodParser _methodParser;
+        private IMethodParser _methodParser;
 
         public DirectoryBasedMethodParser()
         {
-            _methodParser = new MethodParser();
+            _methodParser = new JsonBasedMethodParser();
         }
 
+        //for json only
         public List<Method> ParseAllMethods(string directoryPath)
+        {
+            var methods = new List<Method>();
+            methods = _methodParser.GetMethods(directoryPath);
+            return methods;
+        }
+
+        //uncomment if json file does not used for method parsing
+        /*public List<Method> ParseAllMethods(string directoryPath)
+        {
+            var methods = new List<Method>();
+            foreach (var directory in Directory.GetDirectories(directoryPath))
+            {
+                Browse(new DirectoryInfo(directory), methods);
+            }
+            //  Browse(new DirectoryInfo(directoryPath), methods);
+            return methods;
+        }*/
+
+        public List<Method> ParseAllMethodsUsingParallelProcessing(string directoryPath)
         {
             var methods = new List<Method>();
             Browse(new DirectoryInfo(directoryPath), methods);
@@ -27,9 +47,12 @@ namespace TestBed
 
         private void Browse(DirectoryInfo directory, List<Method> methods)
         {
+
             foreach (var javaFile in directory.GetFiles("*.java").ToList())
             {
-               // Console.WriteLine("Prcessing..{0}",javaFile.FullName);
+                if (javaFile.FullName.Contains("test"))
+                    continue;
+                // Console.WriteLine("Prcessing..{0}",javaFile.FullName);
                 methods.AddRange(_methodParser.GetMethods(javaFile.FullName));
             }
 

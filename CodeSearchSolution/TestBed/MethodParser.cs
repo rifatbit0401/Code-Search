@@ -9,7 +9,7 @@ using TestBed.Model;
 
 namespace TestBed
 {
-    public class MethodParser
+    public class MethodParser : IMethodParser
     {
         public const string MethodDeclarationExpr =
             @"(public|protected|private|static|\s) +[\w\<\>\[\]]+\s+(\w+) *\([^\)]*\) *(\{?|[^;])";

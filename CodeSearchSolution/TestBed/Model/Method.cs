@@ -13,6 +13,8 @@ namespace TestBed.Model
         public string Parameters { get; set; }
         public string Signature { get; set; }
         public List<string> Body { get; set; }
+        public string ClassName { get; set; }
+        public string PackageName { get; set; }
 
         public Method()
         {
